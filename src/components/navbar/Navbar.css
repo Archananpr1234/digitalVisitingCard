@@ -1,0 +1,151 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #007BFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.navbar-brand:hover,
+.navbar-brand.active {
+    text-decoration: underline;
+}
+
+.navbar-item-right ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-item-right ul li a {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-item-right ul li a:hover,
+.navbar-item-right ul li a.active {
+    text-decoration: underline;
+}
+
+.login-button {
+    background-color: #FFEB3B;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgb(226, 226, 146);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-button {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-self: flex-end; /* Align close button to the top-right */
+}
+
+.close-button:hover {
+    color: #ffeb3b; /* Highlight close button on hover */
+}
+
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-item-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #007BFF;
+        width: 250px;
+        max-height: calc(100vh - 60px); /* Leave space for the navbar */
+        position: fixed;
+        top: 80px; /* Start below the navbar */
+        right: -250px; /* Hidden off-screen initially */
+        padding: 20px;
+        overflow-y: auto; /* Scrollable if content exceeds available height */
+        transition: right 0.3s ease-in-out;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    }
+
+    .navbar-item-right.active {
+        right: 0; /* Slide into view */
+    }
+
+    .navbar-item-right ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-item-right ul li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .navbar-item-right ul li a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap; /* Prevent line breaks for long items like "Demo Videos" */
+    }
+
+    .navbar-item-right ul li a:hover,
+    .navbar-item-right ul li a.active {
+        text-decoration: underline;
+    }
+
+    .login-button {
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+   
+   
+    .navbar-item-right.active .close-button {
+        display: block;
+    }
+    
+}

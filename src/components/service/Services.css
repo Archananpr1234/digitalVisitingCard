@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.services-container {
+    text-align: center;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9fafc; /* Background color to match the image */
+}
+
+.services-container h1 {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: #007BFF;
+    margin: 8px auto 20px auto;
+    border-radius: 1px;
+}
+
+
+.heading-service-para {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    height: 250px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h2{
+    margin-top: 15px;
+    font-size: 16px; /* Reduced font size for single line */
+    font-weight: 600;
+    color: #007BFF;
+    line-height: 1.2; /* Adjusted line-height to fit longer text on one line */
+    white-space: nowrap; /* Prevents line wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.service-brand {
+    /* font-size: 40px; */
+    font-weight: bold;
+    /* color: white; */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service:hover,
+.service-brand.active {
+    text-decoration: underline;
+}
+
+.service-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    color: #007BFF;
+    font-size: 36px; /* Adjusted icon size */
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
