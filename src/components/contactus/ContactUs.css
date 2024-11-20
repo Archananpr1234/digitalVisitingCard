@@ -9,6 +9,7 @@
     padding: 40px 20px;
     font-family: Arial, sans-serif;
     background-color: #f9fafc;
+    padding: 10px;
 }
 
 .contact-main-container h1 {
@@ -52,6 +53,7 @@
 .form-row {
     display: flex;
     gap: 10px;
+    /* flex-wrap: wrap; */
 }
 
 .form-group {
@@ -184,3 +186,34 @@ textarea {
 .policy-links a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .contact-form, 
+    .contact-info {
+        width: 100%; /* Adjust width to fit the column layout */
+        max-width: 400px; /* Optional: Maintain a max width for better readability */
+        height: auto; /* Ensure height adjusts to content */
+    }
+}
+
+
+@media (max-width:900px){
+    .form-row{
+        flex-wrap: wrap;
+    }
+    .contact-form, .contact-info{
+        height: 520px;
+    }
+}
+
+
+
+
+

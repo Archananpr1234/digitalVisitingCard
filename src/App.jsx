@@ -7,7 +7,7 @@ import Features from './components/features/Features'
 import Pricing from './components/pricing/Pricing'
 import DemoVideos from './components/demovideos/DemoVideos'
 import ContactUs from './components/contactus/ContactUs'
-import Footer from './components/footer/footer'
+import Footer from './components/footer/Footer';
 import Home from './components/home/Home'
 
 

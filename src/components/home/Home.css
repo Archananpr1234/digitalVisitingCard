@@ -8,11 +8,16 @@
     display: flex;
     justify-content: center;
     background-color: #007BFF;
-    gap: 50px;
+    gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 
+}
 
+.home-item-left,
+.home-item-right-img {
+    padding: 10px;
 }
 
 .home-item-left h1 {
@@ -29,13 +34,14 @@
 .inspire-button {
     display: flex;
     gap: 20px;
+    padding: 10px;
 }
 
 .inspire-bussiness-button {
     background-color: #FFEB3B;
     color: black;
     border-radius: 30px;
-    padding: 15px 35px;
+    padding: 10px 35px;
     font-weight: bold;
     border: 2px solid white;
     cursor: pointer;
@@ -45,7 +51,7 @@
     background-color: #FF3D00;
     color: white;
     border-radius: 30px;
-    padding: 15px 35px;
+    padding: 10px 35px;
     font-weight: bold;
     border: 2px solid white;
     cursor: pointer;
@@ -71,7 +77,6 @@
     width: 550px;
     object-fit: contain;
     animation: float 3s ease-in-out infinite;
-    /* Add animation with infinite loop */
 }
 
 @keyframes float {
@@ -91,27 +96,78 @@
         display: flex;
         justify-content: center;
         background-color: #007BFF;
-        gap: 50px;
+        gap: 10px;
         align-items: center;
         flex-wrap: wrap;
         padding-top: 80px;
-    
-    
+
+
+    }
+
+    .inspire-bussiness-button {
+        background-color: #FFEB3B;
+        color: black;
+        border-radius: 30px;
+        padding: 5px 25px;
+        font-weight: bold;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+
+    .inspire-franchise-button {
+        background-color: #FF3D00;
+        color: white;
+        border-radius: 30px;
+        padding: 5px 25px;
+        font-weight: bold;
+        border: 2px solid white;
+        cursor: pointer;
+
     }
 
 }
+
 
 @media (max-width: 1080px) {
     .home-container {
         display: flex;
         justify-content: center;
         background-color: #007BFF;
-        gap: 50px;
+        gap: 10px;
         align-items: center;
         flex-wrap: wrap;
-        padding-top: 200px;
-        
-    
-    
+        padding-top: 150px;
     }
+}
+
+@media (min-width: 1081px) and (max-width: 1160px) {
+    .home-container {
+        padding-top: 110px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .inspire-bussiness-button {
+        background-color: #FFEB3B;
+        color: black;
+        border-radius: 30px;
+        padding: 3px 5px;
+        font-weight: bold;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+
+    .inspire-franchise-button {
+        background-color: #FF3D00;
+        color: white;
+        border-radius: 30px;
+        padding: 3px 5px;
+        font-weight: bold;
+        border: 2px solid white;
+        cursor: pointer;
+
+    }
+    
 }

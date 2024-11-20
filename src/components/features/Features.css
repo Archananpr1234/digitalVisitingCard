@@ -62,5 +62,5 @@ margin-bottom: 30px;
     background-color: #fff;
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    cursor: pointer;
 }

@@ -52,6 +52,7 @@
     background-color: #fff;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .service-card h2{
@@ -60,7 +61,7 @@
     font-weight: 600;
     color: #007BFF;
     line-height: 1.2; /* Adjusted line-height to fit longer text on one line */
-    white-space: nowrap; /* Prevents line wrapping */
+    white-space: wrap; /* Prevents line wrapping */
     overflow: hidden;
     text-overflow: ellipsis;
 }

@@ -9,6 +9,7 @@
     padding: 40px 20px;
     font-family: Arial, sans-serif;
     background-color: #f9fafc;
+    overflow: hidden; /* Ensures no unintended horizontal scroll */
 }
 
 .demovideo-container h1 {
@@ -26,10 +27,6 @@
     border-radius: 1px;
 }
 
-.content-container .video-container iframe{
-    height: 450px;
-}
-
 .demovideo-container p {
     font-size: 18px;
     color: #333;
@@ -39,25 +36,33 @@
 /* Container for video and reference links */
 .content-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .video-container {
     flex: 1;
-    max-width: 560px;
+    max-width: 100%; /* Ensure video container doesn't overflow */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
 }
 
 .reference-links {
+    flex: 1;
+    max-width: 500px; /* Limits the reference links box */
     background-color: #f0f2f5;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 500px;
     text-align: left;
 }
 
@@ -65,7 +70,6 @@
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
-    /* text-align: center; */
 }
 
 .reference-links ul {
@@ -84,13 +88,11 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding-left: 5px;
     gap: 8px;
 }
 
-.reference-links a span{
+.reference-links a span {
     color: black;
-    
 }
 
 .reference-links a:hover {
@@ -99,18 +101,35 @@
 
 .reference-links a svg {
     margin-left: 5px; /* Adds space between the link text and icon */
-    font-size: 14px;  /* Adjust icon size */
+    font-size: 14px; /* Adjust icon size */
 }
 
-@media (max-width:768px) {
-    .content-container{
+@media (max-width: 900px) {
+    .video-container iframe {
+        height: 420px; /* Reduce height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
+        align-items: center; /* Center the column layout */
     }
-    .content-container .video-container iframe{
-        width: 500px;
+
+    .video-container iframe {
+        height: 300px; /* Further reduce height for smaller screens */
+        width: 400px;
     }
-    
+
+    .reference-links {
+        width: 100%; /* Take full width on small screens */
+        max-width: 500px; /* Maintain reasonable max width */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container iframe {
+        height: 250px; /* Optimize for very small screens */
+        width: 250px;
+    }
 }
